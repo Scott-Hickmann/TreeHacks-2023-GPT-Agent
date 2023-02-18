@@ -17,7 +17,7 @@ if (process.env.NODE_ENV !== 'production') {
     )
   });
   server.listen(443);
-  wss = new WebSocket.Server({ server });
+  wss = new WebSocketServer({ server });
 }
 
 wss.on('connection', (ws) => {
