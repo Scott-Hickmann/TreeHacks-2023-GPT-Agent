@@ -20,8 +20,6 @@ if (process.env.NODE_ENV !== 'production') {
   wss = new WebSocketServer({ server });
 }
 
-wss.on('error', console.error);
-
 wss.on('connection', (ws) => {
   ws.on('error', console.error);
 
