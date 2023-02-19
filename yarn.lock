@@ -1254,10 +1254,10 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chatgpt@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/chatgpt/-/chatgpt-4.4.1.tgz#eff15cd6f73a75632580d1ef95e1c4ed56adcc70"
-  integrity sha512-rccShNzq/aE4LMmwTW4IOHIAZgNRbX0KetVKRCdR4SkRXz63FWzOfu8pNbaN65gsvvXwXyRzD7W4LLDyXe4TYg==
+chatgpt@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/chatgpt/-/chatgpt-4.5.0.tgz#d146b4c9ef462bb080ccbfad08c88e547a7c8f5c"
+  integrity sha512-B/UOp53WNxAXCTAwZ7VIoQpX0tSr8xRzMXUvqqU+lfqjtxeEO9UDobDkLRJXV/4H3ELddGXNoYWuQhtWYJ9hGw==
   dependencies:
     eventsource-parser "^0.0.5"
     gpt-3-encoder "^1.1.4"

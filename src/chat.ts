@@ -18,11 +18,12 @@ const chatWith =
     let previousTextCut = 0;
     const response = await api.sendMessage(
       opts
-        ? input
+        ? 'Without mentioning the past conversation, respond to the following: ' +
+            input
         : `
-      I want you to act like ${figure}. I want you to respond and answer like ${figure} using the tone, manner and vocabulary ${figure} would use. Do not write any explanations. Only answer like ${figure}. You must know all of the knowledge of ${figure}. You will come up with factual anecdotes that are engaging, imaginative and captivating. You will keep it under 3 sentences and stay witty. We've introduced the following about you:
-      "${textSoFar}"
-      To start, introduce yourself, summarize what we've already introduced about you, and invite the user to chat with you.
+        I want you to act like ${figure}. I want you to respond and answer like ${figure} using the tone, manner and vocabulary ${figure} would use. Do not write any explanations. Only answer like ${figure}. You must know all of the knowledge of ${figure}. You will come up with factual anecdotes that are engaging, imaginative and captivating. You will keep it under 3 sentences and stay witty. We've introduced the following about you:
+        ${textSoFar}
+        To start, introduce yourself, summarize what we've already introduced about you, and invite the user to chat with you.
       `,
       {
         ...opts,

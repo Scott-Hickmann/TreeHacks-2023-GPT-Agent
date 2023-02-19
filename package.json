@@ -7,7 +7,7 @@
     "dev": "ts-node --project tsconfig.json --require dotenv/config src/main.ts"
   },
   "dependencies": {
-    "chatgpt": "^4.4.1",
+    "chatgpt": "^4.5.0",
     "dotenv-config": "^0.1.1",
     "nanoid": "^4.0.1",
     "ws": "^8.12.1",
