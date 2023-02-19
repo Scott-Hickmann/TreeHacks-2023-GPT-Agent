@@ -1,11 +1,13 @@
-import { ChatGPTAPI } from 'chatgpt';
+import { ChatGPTAPIBrowser } from 'chatgpt';
 import { PEOPLE } from './people';
 import type { GPTOptions } from './types';
+import dotenv from 'dotenv';
+dotenv.config();
 
-if (!process.env.OPENAI_API_KEY) throw new Error('Missing OPENAI_API_KEY');
-
-const api = new ChatGPTAPI({
-  apiKey: process.env.OPENAI_API_KEY
+const api = new ChatGPTAPIBrowser({
+  email: process.env.OPENAI_EMAIL!,
+  password: process.env.OPENAI_PASSWORD!,
+  isGoogleLogin: true
 });
 
 export const chatWith = async (
@@ -27,9 +29,9 @@ export const chatWith = async (
       `,
     {
       ...opts,
-      onProgress: ({ text }) => {
-        const newText = text.slice(previousTextCut);
-        previousTextCut = text.length;
+      onProgress: ({ response }) => {
+        const newText = response.slice(previousTextCut);
+        previousTextCut = response.length;
         if (newText) {
           onProgress(newText);
         }

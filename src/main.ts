@@ -48,7 +48,7 @@ wss.on('connection', (ws) => {
           type: 'info',
           data: {
             conversationId: response.conversationId,
-            parentMessageId: response.parentMessageId
+            parentMessageId: response.messageId
           }
         })
       );
