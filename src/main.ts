@@ -1,5 +1,5 @@
 import { Server, WebSocket, WebSocketServer } from 'ws';
-import { chatWithCarson } from './chat';
+import { chatWith } from './chat';
 import { RequestData } from './types';
 import fs from 'fs';
 import https from 'https';
@@ -35,7 +35,8 @@ wss.on('connection', (ws) => {
     if (parsed.success) {
       const { data } = parsed;
       console.log('Running agent on', data);
-      const response = await chatWithCarson(
+      const response = await chatWith(
+        data.articleId,
         data.input,
         (partialResponse) => {
           ws.send(JSON.stringify({ type: 'data', data: partialResponse }));
